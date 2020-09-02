@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My_Website_Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="css/my_new_css.css">
+
+  <!--Dette er til javascript-->
+  <script src="Javascript/script.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="linkarea">
+            <a class="one"target="_self" href="#p1">Forside</a>
+            <a class="one"target="_self" href="#p2">Medarbejdere</a>
+            <a class="one"target="_self" href="#p3">Nyheder</a>
+            <a class="one"target="_self" href="#p4">JavaScript</a>
+        </div>
+        <div class="content_frame">
+            <div class="content">
+            <!--Script forsøg med openweather web sitet-->
+                <p>Fetch med by navn Viborg</p>
+                <p id="city_name_fetch">
+                </p>
+                
+                <p>Fetch med by navn Thisted</p>
+                <button type="button" onclick="openWeatherMapScriptThisted()">Fetch With Name Thisted</button>
+                <p id="city_name_fetch_thisted"></p>
+
+                <p>Fetch med cordinater</p>
+                <button type="button" onclick="openWeatherMapCords()">Fetch With Cords</button>
+                <p id="cord_fetch"></p>
+
+                <p>Fetch med One Call cordinater med excludes</p>
+                <button type="button" onclick="openWeatherMapOneCall()">One Call Fetch</button>
+                <p id="cord_fetch_one_call"></p>
+
+                <p>Fetch med navn via input</p>
+                <form action="#">                  
+                    <input type="text" id="city_name" name="name" value="Viborg">
+                    <input onclick="openWeatherMapScriptCityNameInput()" type="button" value="Submit" id="myButton"></input>
+                        
+                    <p id="city_name_fetch_input"></p>                     
+                </form>
+
+                <p>Fetch med navn via input udvalgte data</p>
+                <form action="#">                  
+                    <input type="text" id="city_name_1" name="name" value="Viborg">
+                    <input onclick="openWeatherMapScriptCityNameInputChoose()" type="button" value="Submit" id="myButton1"></input>
+                        
+                    <p id="city_name_fetch_input_1"></p>                     
+                </form>
+
+            
+            
+                <!--Dette er en statisk måde at få data ud på site. Vil prøve at få det til at virke med formular-->
+                <p>Fetch statisk udvalg af data</p>
+                <p id="content"></p>
+                <p id="temperatur"></p>
+            
+            <!--Slut på Script forsøg med openweather web sitet-->
+            </div>
+
+        </div>
+        
+        <div class="footer">
+            <p>Dette er en footer</p>
+        </div>
+
+    </div>
+
+    
+
+
+
+</body>
+</html>
