@@ -8,7 +8,6 @@ body
 .container 
 { 
   width: 1200px;
-  /*margin: 0 auto;*/
   text-align: center;
   margin-top: 30px; 
   margin-bottom: auto;
@@ -20,42 +19,65 @@ body
 .linkarea 
 {
   float: left;
-  height: 30px;
-  min-width: 600px;
-  max-width: 1200px;
-  background-color:  #14a738;
-  margin: 0 auto;
+  height: 140px;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 10px;
   border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  position: relative;
+  border-top-right-radius: 50px; 
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  vertical-align: middle;
+  /*background-color:  #464947;*/
 }
 
 /* box til at indramme alt indhold på sitet */
 .content_frame 
 {
   float: left;
-  width: 1200px;
+  /*width: 100%;*/
+  width: 1160px;
   min-height: 300px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #14a738;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;  
   border-bottom-right-radius: 50px;
+  /*background-color: #464947;*/
 }
 
 /* indholdbox bruges til at styre ramme til oversigt af indhold på site */
-.content
+.content-outer
 {
   float: left;
-  width: 1180px;
-  min-height: 200px;
+  min-width: 550px;
+  min-height: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #14a738; 
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px; 
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.content-inner
+{
+  float: left;
+  min-width: 530px;
+  min-height: 150px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
@@ -76,57 +98,101 @@ body
   height: 60px;
 }
 
+/* knap links */
+.button-link-outer 
+{
+  float: left;
+  height: 130px;
+  width: 130px;
+  background-color:  #14a738;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px; 
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.button-link-inner 
+{
+  float: left;
+  height: 110px;
+  width: 110px;
+  background-color:  #e6e6e6;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px; 
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  padding-top: 5px;
+}
+
+.konverter_knap
+{
+  float: left;
+  height: 40px;
+  width: 340px;
+  background-color:  #11b63a;
+  margin-right: auto;
+  margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 56px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px; 
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  padding-top: 20px;
+}
 
 /*** Dette er styling af links i toppen af sitet ***/
 /* unvisited link */
 a.one:link 
 {
-  color:#e6e6e6;
-  text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  columns: #333333;
+  text-decoration: none; 
+  font-size: 12pt;
 }
 
 /* visited link */
 a.one:visited 
 {
-  color:#e6e6e6;
-  text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  color:#333333;
+  text-decoration: none; 
+  font-size: 12pt;
 }
 
 /* mouse over link */
 a.one:hover 
 {
   color: #6b87aa;
-  text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-decoration: none; 
+  font-size: 12pt;
 }
 
 /* selected link */
 a.one:active 
 {
   color: #6b87aa;
-  text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-decoration: none; 
+  font-size: 12pt;
 }
 
 /*** Dette er styling af defaultlinks ***/
 /* unvisited link */
 a:link 
 {
-  color: #727171;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 16pt;
 }
 
 /* visited link */
 a:visited 
 {
-  color: #5a5959;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 16pt;
 }
 
 /* mouse over link */
@@ -134,6 +200,7 @@ a:hover
 {
   color: #202020;
   text-decoration: none;
+  font-size: 16pt;
 }
 
 /* selected link */
@@ -141,6 +208,7 @@ a:active
 {
   color: #333333;
   text-decoration: none;
+  font-size: 16pt;
 }
 
 /*** Dette er styling af tekst tags på sitet ***/

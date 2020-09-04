@@ -15,64 +15,109 @@
 <body>
 
     <div class="container">
+        
         <div class="linkarea">
-            <a class="one"target="_self" href="#p1">Forside</a>
-            <!--<a class="one"target="_self" href="#p2">Medarbejdere</a>
-            <a class="one"target="_self" href="#p3">Nyheder</a>
-            <a class="one"target="_self" href="#p4">JavaScript</a>-->
+            <article class="button-link-outer">
+                <article class="button-link-inner">
+                    <a class="one"target="_self" href="#p1" onclick="openWeatherScriptViborg()"><br/>Fetch med<br/>by navn<br/>Viborg</a>
+                </article>
+            </article>
+
+            <article class="button-link-outer">
+                <article class="button-link-inner">
+                    <a class="one"target="_self" href="#p2" onclick="openWeatherScriptThisted()"><br/>Fetch med<br/>by navn<br/>Thisted</a>
+                </article>
+            </article>
+            
+
+            <article class="button-link-outer">
+                <article class="button-link-inner">
+                    <a class="one"target="_self" href="#p3" onclick="openWeatherMapCords()"><br/>Fetch med<br/>Kordinator<br/>Skive</a>
+                </article>
+            </article>
+
+            <article class="button-link-outer">
+                <article class="button-link-inner">
+                    <a class="one"target="_self" href="#p4" onclick="openWeatherMapOneCall()"><br/>Fetch med<br/>Forsøg<br/>Med OneCall</a>
+                </article>
+            </article>
+            
+            
         </div>
+         <!--Script forsøg med openweather web sitet -->                       
         <div class="content_frame">
-            <div class="content">
-            <!--Script forsøg med openweather web sitet -->
-                
-                <!--Dette er all data call på Viborg by -->
-                <h3>Fetch med by navn Viborg</h3>
-                <p id="city_name_fetch">
-                </p>
-                
-                <!--Dette er all data call på Thisted by i stedet-->
-                <h3>Fetch med by navn Thisted</h3>
-                <button type="button" onclick="openWeatherMapScriptThisted()">Fetch With Name Thisted</button>
-                <p id="city_name_fetch_thisted"></p>
+            
+            <!--Dette er specifik call på by navn -->
+            <div class="content-outer">
+                <div class="content-inner">
+                                    
+                    <h3>Fetch med navn via input</h3>
+                    <form action="#">                  
+                        <input type="text" id="city_name" name="name" value="Thisted">
+                        <p>*Start med stor bogstav og tryk submit*</p>
+                        <input onclick="openWeatherMapScriptCityNameInput()" type="button" value="Submit" id="myButton"></input>
+                            
+                        <p id="land">Land</p>
+                        <p id="by_navn">By navn</p>
+                        <p id="vind_styrke">Vind styrke</p>
+                        <p id="temperatur">Temperatur</p>
+                                          
+                    </form>
 
-                <!--Dette er forsøg med kordinator istedet for by navn-->
-                <h3>Fetch med cordinater</h3>
-                <button type="button" onclick="openWeatherMapCords()">Fetch With Cords</button>
-                <p id="cord_fetch"></p>
-                
-                <!--Dette er forsøg med one call istedet for current-->
-                <h3>Fetch med One Call cordinater med excludes</h3>
-                <button type="button" onclick="openWeatherMapOneCall()">One Call Fetch</button>
-                <p id="cord_fetch_one_call"></p>
-                
-                <!--Dette er en statisk måde at få data ud på site. Vil prøve at få det til at virke med formular-->
-                <h3>Fetch statisk udvalg af data</h3>
-                <p id="land"></p>
-                <p id="by_navn"></p>
-                <p id="temperatur"></p>
+                </div>
+            </div>
 
-                <!--Dette er et forsøg med by navn input vis specifik data-->
-                <h3>Fetch med navn via input</h3>
-                <form action="#">                  
-                    <input type="text" id="city_name" name="name" value="Thisted">
-                    <input onclick="openWeatherMapScriptCityNameInput()" type="button" value="Submit" id="myButton"></input>
-                        
-                <p id="land_1"></p>
-                <p id="by_navn_1"></p>
-                <p id="temperatur_1"></p>
-                <!--<a href="https://www.calculateme.com/temperature/kelvin-to-celsius" target="blank" >Kelvin til celcius converter link</a> -->                   
-                </form>
+            <!--Kelvin Konverter link -->
+            <div class="content-outer">
+                <div class="content-inner">
+                       <h3>Teperatur bliver målt i Kelvin</h3> 
+                       <p>Kelvin er en mere præcis måling af grader til at vurder temperatur.<br/>
+                        Hvis temperaturen hellere vil vides i Celcius.<br/> 
+                        Er der et link til en Levin Celsius konverter her under</p>         
+                        <article class="konverter_knap">
+                            <a href="https://www.calculateme.com/temperature/kelvin-to-celsius" target="blank" >Kelvin til celcius converter link</a>
+                        </article>
+                </div>
+            </div>
 
-                <!--Dette er et forsøg med alt data men med by navn input fra fomular-->
-                <h3>Fetch med navn via input</h3>
-                <form action="#">                  
-                    <input type="text" id="city_name_1" name="name" value="Viborg">
-                    <input onclick="openWeatherMapScriptCityNameInput_1()" type="button" value="Submit" id="myButton"></input>
-                        
-                    <p id="city_name_fetch_input"></p>                     
-                </form>
-                       
-            <!--Slut på Script forsøg med openweather web sitet-->
+            <!--Dette er all data call på Viborg by -->
+            <div class="content-outer" id="p1">
+                <div class="content-inner">
+                                       
+                    <h3>Fetch alt Data med by navn Viborg</h3>
+                    <p id="city_viborg_fetch"></p>
+
+                </div>
+            </div>
+
+            <!--Dette er all data call på Thisted by -->
+            <div class="content-outer" id="p2">
+                <div class="content-inner">
+                    
+                    <h3>Fetch alt Data med by navn Thisted</h3>
+                    <p id="city_thisted_fetch"></p>
+
+                </div>
+            </div>
+
+            <!--Dette er all data call på Skive kordinator -->
+            <div class="content-outer" id="p3">
+                <div class="content-inner">
+                    
+                    <h3>Fetch alt Data om Skive med kordinater</h3>
+                    <p id="cord_fetch_skive"></p>
+
+                </div>
+            </div>
+
+            <!--Dette er en data call forsøg med one call istedet for current- -->
+            <div class="content-outer" id="p4">
+                <div class="content-inner">
+                    
+                    <h3>Fetch med OneCall cordinater med excludes i stedet for Current</h3>
+                    <p id="cord_fetch_one_call"></p>
+
+                </div>
             </div>
 
         </div>
@@ -81,12 +126,8 @@
             &nbsp
         </div>
         
-
     </div>
 
     
-
-
-
 </body>
 </html>
