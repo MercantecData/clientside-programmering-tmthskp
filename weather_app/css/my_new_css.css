@@ -7,7 +7,7 @@ body
 /* En box der inrammer hele sitet */
 .container 
 { 
-  width: 1200px;
+  width: 700px;
   text-align: center;
   margin-top: 30px; 
   margin-bottom: auto;
@@ -38,7 +38,8 @@ body
 {
   float: left;
   /*width: 100%;*/
-  width: 1160px;
+  /*width: 1160px;*/
+  width: 600px;
   min-height: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -178,9 +179,9 @@ a.one:active
   font-size: 12pt;
 }
 
-/*** Dette er styling af defaultlinks ***/
+/*** Dette er styling af links på page ***/
 /* unvisited link */
-a:link 
+a.two:link 
 {
   color: #ffffff;
   text-decoration: none;
@@ -188,7 +189,7 @@ a:link
 }
 
 /* visited link */
-a:visited 
+a.two:visited 
 {
   color: #ffffff;
   text-decoration: none;
@@ -196,7 +197,7 @@ a:visited
 }
 
 /* mouse over link */
-a:hover 
+a.two:hover 
 {
   color: #202020;
   text-decoration: none;
@@ -204,7 +205,7 @@ a:hover
 }
 
 /* selected link */
-a:active 
+a.two:active 
 {
   color: #333333;
   text-decoration: none;

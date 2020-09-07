@@ -47,28 +47,12 @@ function SendDatatoPage(data)
     document.getElementById("land").innerHTML = `Land ${data.sys.country}`
     document.getElementById("by_navn").innerHTML = `Vejret i ${data.name}`
     document.getElementById("vind_styrke").innerHTML = `Vind styrke ${data.wind.speed}`
-    document.getElementById("temperatur").innerHTML = `Temperatur ${data.main.temp}° grader i Kelvin`
-    //document.getElementById("temperatur_1").innerHTML = `Temperatur ${Math.floor(data.main.temp) - 273,15}° grader i Kelvin`
-}
-
-//Forsøg med formular input specifik data
-function openWeatherMapScriptCityNameInput_1()
-{
-    var url_1 = "https://api.openweathermap.org/data/2.5/weather?q="+document.getElementById("city_name_1").value+"&appid=8d25bcbc04528882c5fbe036421e9aeb"
     
-    fetch(url_1)
-    .then(data_1=>data_1.json())
-    .then(SendDatatoPage_1)   
+    document.getElementById("temperatur").innerHTML = `Temperatur ${Math.floor(data.main.temp) - 272}° grader i celcius`
+    //document.getElementById("temperatur").innerHTML = `Temperatur ${data.main.temp}° grader i Kelvin`
 }
 
-function SendDatatoPage_1(data)
-{
-    document.getElementById("land_1").innerHTML = `Land ${data.sys.country}`
-    document.getElementById("by_navn_1").innerHTML = `Vejret i ${data.name}`
-    document.getElementById("temperatur_1").innerHTML = `Temperatur ${data.main.temp}° grader i Kelvin`
-    //document.getElementById("vejr_situation_1").innerHTML = `Vejr situation ${data.weather.main}`
-   
-}
+
 
 //Forsøg med Onecall
 function openWeatherMapOneCall()
@@ -110,5 +94,24 @@ function SendDatatoPage(data)
 }
 */
 
+/*
+//Forsøg med formular input specifik data
+function openWeatherMapScriptCityNameInput_1()
+{
+    var url_1 = "https://api.openweathermap.org/data/2.5/weather?q="+document.getElementById("city_name_1").value+"&appid=8d25bcbc04528882c5fbe036421e9aeb"
+    
+    fetch(url_1)
+    .then(data_1=>data_1.json())
+    .then(SendDatatoPage_1)   
+}
+
+function SendDatatoPage_1(data)
+{
+    document.getElementById("land_1").innerHTML = `Land ${data.sys.country}`
+    document.getElementById("by_navn_1").innerHTML = `Vejret i ${data.name}`
+    document.getElementById("temperatur_1").innerHTML = `Temperatur ${data.main.temp}° grader i Kelvin`
+    //document.getElementById("vejr_situation_1").innerHTML = `Vejr situation ${data.weather.main}`   
+}
+*/
 
     
