@@ -16,13 +16,15 @@ function openWeatherMapScriptCityNameInput()
 
 function SendDatatoPage(data)
 {
-    var {icon} = data.weather[0];
+    var {icon} = data.weather[0]
+    var pil = data.wind.deg
 
-    document.getElementById("land").innerHTML = `Land ${data.sys.country}`
+    document.getElementById("land").innerHTML = `${data.sys.country}`
     document.getElementById("by_navn").innerHTML = `${data.name}`
     document.getElementById("vind_styrke").innerHTML = `${data.wind.speed}`  
     document.getElementById("temperatur").innerHTML = `${Math.floor(data.main.temp) - 272}°` 
     document.getElementById("icons").innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" style="width: 150px"/>`
+    document.getElementById("wind_angle").innerHTML = `<img src="image/pil.png" style=" transform: rotate(${pil}deg); width: 50px"/>`
     
 }
  

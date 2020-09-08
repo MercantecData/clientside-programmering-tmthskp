@@ -2,20 +2,19 @@
 /*ROOT VARIABLES*/
 /* Color variabler */
 :root {
-    --bg_main: #0a1f44;
+    --bg_main: #10dbff;
     --bg_light: #e6e6e6;
     --text_light: #fff;
     --text_med: #53627c;
     --text_dark: #1e2432;
-    --red: #ff1e42;
-    --darkred: #c3112d;
-    --orange: #ff8c00;
+    --dark_cyan: rgb(0, 117, 117);
+
   }
 
 body 
 {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg_light);
+  background: var(--dark_cyan);
 }
 
 /*** Dette er styling af tekst tags på sitet ***/
@@ -55,7 +54,6 @@ p
   display: block;
 }
 
-
 /*CUSTOM VARIABLES*/
 .button
 {
@@ -63,11 +61,18 @@ p
   margin-right: auto;
   text-align: center;
   font-size: 14pt;
+  background-color: var(--bg_main);
   color: var(--text_dark);
   display: block;
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;  
+  border-bottom-right-radius: 50px; 
+  cursor: pointer;
 }
-
-
 
 /* En box der inrammer hele sitet */
 .container 
