@@ -26,25 +26,35 @@
             <!--Dette er specifik call på by navn -->
             <div class="content-outer">
                 <div class="content-inner">
-                                    
-                    <h1>Indtast by navn for at vide vejret</h1>
+                    <article>              
+                        <h1>Indtast by navn for at vide vejret</h1>
                                                   
-                    <input type="text" id="city_name" name="name" value="Thisted" >
-                    <p><i>*Start med stor bogstav og tryk submit*</i></p>                                  
-                    <input onclick="openWeatherMapScriptCityNameInput()" type="button" value="Submit" id="myButton" class="button">
-                           
-                    <p>Land</p>
-                    <h1 id="land"></h1>
-                    <p>By navn</p>
-                    <h2 id="by_navn"></h2>
-                    <p>Vind styrke</p>
-                    <h3 id="vind_styrke"></h3>
-                    <p>Vind retning</p>
-                    <p id="wind_angle"></p>
-                    <p>Temperatur</p>
-                    <h1 id="temperatur"></h1>                        
-                    <p id="icons"></p>
+                        <input type="text" id="city_name" name="name" value="Thisted" class="input_field">
+                        <p><i>*Start med stor bogstav og tryk submit*</i></p>                                  
+                        <input onclick="openWeatherMapScriptCityNameInput()" type="button" value="Submit" id="myButton" class="button">
+                    </article>  
                     
+                    <article>
+                        <p>Land</p>
+                        <h1 id="land"></h1>
+                        <p>By navn</p>
+                        <h2 id="by_navn"></h2>
+                        
+                        
+                        <article>
+                            <p>Temperatur</p>
+                            <h1 id="temperatur"></h1>                        
+                            <p id="icons"></p>
+                        </article>
+                        
+                        <p>Vind styrke og retning</p>
+                        <h3 id="vind_styrke"></h3>
+                        
+                        <article class="compas">
+                            <p>Vind retning</p>
+                            <p id="wind_angle"></p>
+                        </article>      
+                    </article>
                     
                     
                                   
