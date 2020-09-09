@@ -4,7 +4,9 @@
 :root {
     --bg_main: #10dbff;
     --bg_light: #e6e6e6;
+    --bg_medium: #7d7c81;
     --bg_dark: #1e2432;
+    --bg_black: #000000;
     --text_light: #fff;
     --text_med: #53627c;
     --text_dark: #1e2432;
@@ -23,8 +25,8 @@ h1
 {
   text-align: center;
   font-size: 16pt;
-  color: var(--text_dark);
   display: block;
+  color: var(--text_light); 
 }
 
 /*styring af h2 tag */
@@ -32,8 +34,8 @@ h2
 {
   text-align: center;
   font-size: 14pt;
-  color: var(--text_dark);
   display: block;
+  color: var(--text_light);
 }
 
 /*styring af h3 tag */
@@ -41,8 +43,17 @@ h3
 {
   text-align: center;
   font-size: 12pt;
-  color: var(--text_dark);
   display: block;
+  color: var(--text_light);
+}
+
+/*styring af h4 tag */
+h4 
+{
+  text-align: center;
+  font-size: 11pt;
+  display: block;
+  color: var(--text_light);
 }
 
 /*styring af p tag */
@@ -50,15 +61,17 @@ p
 {
   text-align: center;
   font-size: 10pt;
-  color: var(--text_dark);
   display: block;
+  color: var(--text_light);
 }
 
-/*CUSTOM VARIABLES*/
+/*CUSTOM CLASS VARIABLES */
 .button
 {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 14pt;
   background-color: var(--bg_main);
@@ -135,7 +148,7 @@ p
   border-top-right-radius: 50px; 
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  box-shadow: 5px 10px #00000075;
+  box-shadow: 10px 15px #00000075;
   z-index: 3;
   position: relative;
 }
@@ -143,7 +156,7 @@ p
 .content-inner
 {
   float: left;
-  width: auto;
+  width: 93%;
   min-height: 150px;
   margin-left: auto;
   margin-right: auto;
@@ -151,7 +164,7 @@ p
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background: var(--bg_light); 
+  background: var(--bg_dark);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px; 
   border-bottom-left-radius: 50px;
@@ -169,21 +182,20 @@ p
 
 /*CUSTOM VARIABLES TIL ARTICLER*/
 .compas
-{
-  
+{ 
   width: 150px;
   height: 150px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-top: 30px;
   padding-left: 10px;
-  padding-right: 10px;
-  background: var(--bg_dark); 
+  padding-right: 10px;  
   border-top-left-radius: 100px;
   border-top-right-radius: 100px; 
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
+  background: var(--bg_black);
   z-index: 5;
   position: relative;
 }
